@@ -67,5 +67,7 @@ Rails.application.configure do
     min_delay: 500,
     max_delay: 10_000,
     :source => :livereload
+    
+  config.force_ssl = true
 
 end
