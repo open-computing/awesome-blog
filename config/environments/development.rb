@@ -61,4 +61,11 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.hosts << "7dae4341d02949368721cd04b87565f6.vfs.cloud9.us-east-2.amazonaws.com"
 
+  # Add Rack::LiveReload to the bottom of the middleware stack with the default options:
+  config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload,
+    live_reload_port: 8081,
+    min_delay: 500,
+    max_delay: 10_000,
+    :source => :livereload
+
 end

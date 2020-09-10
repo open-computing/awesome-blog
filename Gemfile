@@ -31,6 +31,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.4'
+  gem 'guard', '~> 2.16.2'
 end
 
 group :development do
@@ -40,6 +41,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'guard-livereload', '~> 2.5.2', require: false
+  gem 'rack-livereload', '~> 0.3.17'
 end
 
 group :test do
@@ -50,7 +53,6 @@ group :test do
   gem 'webdrivers'
   gem 'minitest', '~> 5.14.1'
   gem 'minitest-reporters', '~> 1.4.2'
-  gem 'guard', '~> 2.16.2'
   gem 'guard-minitest', '~> 2.4.6'
 end
 
