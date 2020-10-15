@@ -37,9 +37,7 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary is-rounded">
-            <strong>Sign up</strong>
-          </a>
+          <%= link_to content_tag(:strong, "Sign up"), signup_path, class: "button is-primary is-rounded" %>
           <a class="button is-light is-rounded">
             <span class="icon is-small">
               <i class="fas fa-sign-in-alt"></i>
