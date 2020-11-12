@@ -2,7 +2,36 @@
 
 <section class="section">
   <div class="container">
-    <h1 class="title">Users#new</h1>
-    <p>Find me in app/views/users/new.html.erb</p>
+    <div class="columns">
+      <div class="column is-half">
+    <h1 class="title">Sign up</h1>
+    
+    <%= form_with(model: @user, local: true) do |f| %>
+      <div class="field">
+      <%= f.label :name, class: "label" %>
+      <%= content_tag(:div, f.text_field(:name, class: "input"), class: "control") %>
+      </div>
+      
+      <div class="field">
+      <%= f.label :email, class: "label" %>
+      <%= content_tag(:div, f.email_field(:email, class: "input"), class: "control") %>
+      </div>
+      
+      <div class="field">
+      <%= f.label :password, class: "label" %>
+      <%= content_tag(:div, f.password_field(:password, class: "input"), class: "control") %>
+      </div>
+      
+      <div class="field">
+      <%= f.label :password_confirmation, "Confirmation", class: "label" %>
+      <%= content_tag(:div, f.password_field(:password_confirmation, class: "input"), class: "control") %>
+      </div>
+      
+      <div class="field">
+      <%= content_tag(:div, f.submit("Create account", class: "button is-primary"), class: "control") %>
+      </div>
+    <% end %>
+    </div>
+    </div>
   </div>
 </section>
