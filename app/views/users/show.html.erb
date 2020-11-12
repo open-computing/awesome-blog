@@ -1,6 +1,15 @@
+<% provide(:title, @user.name) %>
 <section class="section">
-  <div class="container">
-    <h1 class="title">Profile</h1>
-    <p><%= @user.name %>, <%= @user.email %></p>
-  </div>
+  <aside class="level">
+    <div class="level-left">
+      <div class="level-item user_info">
+        <%= gravatar_for @user %>
+      </div>
+      <div class="level-item has-text-centered user_info">
+        <h1 class="title">
+          <%= @user.name %>
+        </h1>
+      </div>
+    </div>
+  </aside>
 </section>
