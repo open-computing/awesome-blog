@@ -13,6 +13,16 @@
   <body>
     <%= render 'layouts/header' %>
     
+    <% unless flash.empty? %>
+      <div class="container">
+        <% flash.each do |message_type, message| %>
+          <div class="notification is-<%= message_type %>">
+            <%= message %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    
     <%= yield %>
     
     <%= render 'layouts/footer' %>

@@ -7,6 +7,7 @@
     <h1 class="title">Sign up</h1>
     
     <%= form_with(model: @user, local: true) do |f| %>
+      <%= render 'shared/error_messages' %>
       <div class="field">
       <%= f.label :name, class: "label" %>
       <%= content_tag(:div, f.text_field(:name, class: "input"), class: "control") %>
