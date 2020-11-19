@@ -1,0 +1,29 @@
+<% provide(:title, "Login") %>
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-half">
+    <h1 class="title">Log in</h1>
+    
+    <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+
+      <div class="field">
+      <%= f.label :email, class: "label" %>
+      <%= content_tag(:div, f.email_field(:email, class: "input"), class: "control") %>
+      </div>
+      
+      <div class="field">
+      <%= f.label :password, class: "label" %>
+      <%= content_tag(:div, f.password_field(:password, class: "input"), class: "control") %>
+      </div>
+      
+      <div class="field">
+      <%= content_tag(:div, f.submit("Log in", class: "button is-primary"), class: "control") %>
+      </div>
+    <% end %>
+    <p class="content">New user? <%= link_to "Sign up now!", signup_path %></p>
+    </div>
+    </div>
+  </div>
+</section>
